@@ -4,7 +4,7 @@
   "description": "TDD Assignment for WINC",
   "main": "main.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Tonyntje/TDD-veggies/issues"
   },
-  "homepage": "https://github.com/Tonyntje/TDD-veggies#readme"
+  "homepage": "https://github.com/Tonyntje/TDD-veggies#readme",
+  "dependencies": {
+    "jest": "^28.1.0"
+  }
 }
