@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "TDD Assignment for WINC",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tonyntje/TDD-veggies.git"
+  },
+  "keywords": [
+    "Assignment"
+  ],
+  "author": "Tony Nieuwenhuijs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tonyntje/TDD-veggies/issues"
+  },
+  "homepage": "https://github.com/Tonyntje/TDD-veggies#readme"
+}
