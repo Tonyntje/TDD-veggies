@@ -17,12 +17,17 @@ const getTotalYield = (crops, sun, wind) => crops.crops.map(e => getYieldForCrop
 // We need to get the total costs by multiplying 1 by the number of crops
 const getCostsForCrop = crop => crop.numCrops * 1
 // Get the revenue by multiplying the salesprice with the number of crops
-const getRevenueFromCrops = crop => crop.yield * crop.salesprice
-// Get profit by deducting the cost from the revenue
-const getProfitForCrop = crop => {
-    const costs = getCostsForCrop(crop)
-    const revenue = getRevenueFromCrops(crop.crop)
-    return revenue - costs;
+const getRevenueFromCrops = (crop, sun, wind) => Array.from(crop)
+                    .map(e => getYieldForPlant(e.crop, sun, wind) * e.salesprice)
+                    .reduce((a, b) => a + b, 0) 
+
+// Get profit by deducting the cost from the revenue of a crop, not all crops
+const getProfitForCrop = (crop, sun, wind) => {
+    
+    const costs = getCostsForCrop(crop) 
+    const singularRevenue = getRevenueFromCrops([crop]) 
+    return singularRevenue
+    // return revenue - costs;
 }
 const getTotalProfit = crops => crops
             .map(e => getProfitForCrop(e))
