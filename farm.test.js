@@ -192,3 +192,8 @@ describe("Estimate profits with weather conditions", () => {
         ).toBe(16.6175)
     });
 });
+
+// Extra Note:
+// I refactored the code 3x because i had the naming convention written down wrong.
+// Before i calculated the revenue crops plurar instead of singular. 
+// This gave me a lot of complications
